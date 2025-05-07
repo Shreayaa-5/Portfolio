@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Photos/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+/*Placing the logo away from the side*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width:140px;
+}
+/*Placing the header in the other side*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+/*To remove the underline and blue color*/
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/*To add the hover effect for the pointer for the headers*/
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #63c5cb;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/*Chaninging the line under the header as we hover above*/
+nav ul li a:hover::after{
+    width: 100%;
+}
+/*Adding margin from top , changing font size*/
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+/*Changin the other text in h1 ; font size and space from top*/
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/* Changin the color*/
+.header-text h1 span{
+    color: #63c5cb;
+}
+/*ABOUT*/
+#about{
+    /*80px from top and bottom and 0 from left and right*/
+    padding: 80px 0;
+    color: #fff;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    /*Width of column is 35%*/
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    /*Width of the image is 100%*/
+    width: 100%;
+    /*The corner of the image will be round*/
+    border-radius: 50px;
+}
+.about-col-2{
+    /*5% space between both the columns */
+    flex-basis: 60%;
+
+}
+.sub-title{
+    /*The color and font of the About me title*/
+    font-size: 60px;
+    font-weight: 600;
+    color: #63c5cb;
+}
+/*Aligning the tabs in about me section*/
+.tab-titles{
+    display: flex;
+    /*20 px from top 0 px from left and right and 40px from bottom*/
+    margin: 20px 0 40px;
+}
+/*For the independent tabs
+- bold font weight
+- horizontaly alligned
+- space between tab title */
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    /*Currently width 0 so wont show*/
+    width: 0;
+    /*The line underneath when hovering . The same height as navigation menu*/
+    height: 3px;
+    background: #63c5cb;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color:#63c5cb;
+    font-size: 14px;
+}
+.tab-contents{
+    /*All tab contents are hidden*/
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+
+}
+/*Services*/
+#services{
+    padding: 30px 0;
+
+}
+/*The projects page items*/
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+/*background for individual projects services-list*/
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 30px;
+    transition: background 0.5s, transform 0.5s;
+    
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/*The font and color of the text inside my projects page*/
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+/*Changing the color as i hover over the project*/
+.services-list div:hover{
+    background: #63c5cb;
+    transform: translateY(-10px);
+}
+/*PORTFOLIO PAGE*/
+#portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius:  10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 1.0s;
+}
+/*The gradient layer on top of the picture and the text allignment on top*/
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.5),#63c5cb);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 1.0s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/* Making a circle around the link tab*/
+.layer a{
+    margin-top: 20px;
+    color: #63c5cb;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+/*Hidding text when cursor over the image*/
+
+/*Zooming in the image when cursor moves on top*/
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #63c5cb;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 1.0s;
+}
+/*Hover effect on the see more button*/
+.btn:hover{
+    background: #63c5cb;
+
+}
+/*CONTACT SECTION*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px; 
+}
+.contact-left p i{
+    color: #ababab;
+    margin-left: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+/*Chaning color when hovering over icons*/
+.social-icons a:hover{
+    color: #63c5cb;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #63c5cb;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline:#ababab;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #63c5cb;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #63c5cb;
+}
+
+/*FOR PHONE SCREEN*/
+nav.fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(Photos/phone.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav.fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #63c5cb;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left:25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}

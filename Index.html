@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comptible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portforlio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2dec0b5356.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Photos/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>B-Tech IT Student</p>
+            <h1>Hi, I'm <span>Shreayaa Srinivasan</span><br> from India</h1>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Adding the ABOUT section for the website-->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <!--Creating two coloums-->
+            <div class="about-col-1">
+                <img src="Photos/p.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <!--Adding some description in the about me section-->
+                <p>Aspiring IT professional and BTEC IT student at PSG College.
+                    Passionate about technology, data analysis, and software development.
+                    Committed to leveraging IT skills to solve real-world problems and innovate.
+                    Always eager to learn and grow in the dynamic field of Information Technology. .</p>
+                    <!--Adding different tabs to show work experience and education-->
+                <div class="tab-titles">
+                    <!--Adding events that take place when clicked on-->
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!--contents of the tab-->
+                <!--Content for Skills -->
+                <div class="tab-contents active-tab" id="skills"> 
+                    <ul>
+                        <li><span>Python</span><br>Using Python to create program</li>
+                        <li><span>SQL</span><br>Using SQL to create queries</li>
+                        <li><span>C</span><br>Using C to create program</li>
+                    </ul>
+                </div>
+                <!--Experience content-->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-Current</span><br>Student at PSG College Of Technology , Coimbatore</li>
+                        <li><span>July-August 2024</span><br>Internship at TITAN Company Limited</li>
+                        <li><span>January 2025</span><br>In-Plant training at Caterpillar</li>
+                    </ul>
+                </div>
+                <!--Education contents -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-Current</span><br>BTech IT : PSG College of Technology</li>
+                        <li><span>2021-2023</span><br>Higher Secondary : Indian Public School</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+<!--SERVICES-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-regular fa-clipboard"></i>
+                <h2>Clipboard manager</h2>
+                <p>We tend to copy over the previously copied text and this causes loss of the data .
+                This project solves this issue by saving multiple previously copied data and has it 
+                ready for us to copy from .</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <h2>Password Manager</h2>
+                <p>This project allows us to save all of Usernames and Passwords.
+                In a document that is encrypted and can only be accesed through the program. 
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-camera-retro"></i>
+                <h2>Screenshot Snapper</h2>
+                <p>This project allows the user to take a complete screenshot screen.
+                With a touch of the cursor.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+<!--Portfolio Page-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Photos/work-1.png">
+                <div class="layer">
+                    <h3>Technical Conclave at KPR</h3>
+                    <p>This workshop allowed me to identify and interact with upcoming technology.
+                    This experience allowed me to interact with like minded people</p>
+                    <a href="#"><i class="fa-solid fa-microchip"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Photos/work-2.png">
+                <div class="layer">
+                    <h3>Internship at TITAN</h3>
+                    <p>This workshop sllowed me to identify and interact with upcoming technology.
+                    This experience allowed me to interact with like minded people</p>
+                    <a href="#"><i class="fa-solid fa-microchip"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Photos/work-3.png">
+                <div class="layer">
+                    <h3>CS50P Certification</h3>
+                    <p>This workshop sllowed me to identify and interact with upcoming technology.
+                    This experience allowed me to interact with like minded people</p>
+                    <a href="#"><i class="fa-solid fa-microchip"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!--CONTACT SECTION-->
+<div id="contact">
+    <div class="container">
+        <!--Creating two columns-->
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shreayaa___?igsh=MTc2dTM3azYwODZkOA%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shreayaa-srinivasan-29558228a/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!--Add your pdf for any link here in href and put download-->
+                <a href="" class="btn btn2">To Start</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Shreayaa Srinivasan. Made with <i class="fa-solid fa-heart"></i> by Shreayaa</p>
+    </div>
+</div>
+
+
+<!--We can add java script inside script -->
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    // defining function onclick
+    function opentab(tabname){
+        for(tablink of tablinks){
+            //Removes the active-link from the certain class
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            //Removes the active-tab from the certain class
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+    }
+    </script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyQ1gHMEDkRH-IBRUKOJ0IhYHqLs0PbhSp-cD5947C-TX5j5iKJHt-vvz31NPFkfV7s9w/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully !"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
